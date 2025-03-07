@@ -15,7 +15,6 @@ a{color:inherit;text-decoration:none}
     max-width:525px;
     min-height:670px;
     position:relative;
-    background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
     box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
@@ -43,7 +42,8 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .tab,
 .login-form .group .label,
-.login-form .group .button{
+.login-form .group .button,
+.login-form .group .button-green{
     text-transform:uppercase;
 }
 .login-html .tab{
@@ -70,13 +70,15 @@ a{color:inherit;text-decoration:none}
 }
 .login-form .group .label,
 .login-form .group .input,
-.login-form .group .button{
+.login-form .group .button,
+.login-form .group .button-green{
     width:100%;
     color:#fff;
     display:block;
 }
 .login-form .group .input,
-.login-form .group .button{
+.login-form .group .button,
+.login-form .group .button-green{
     border:none;
     padding:15px 20px;
     border-radius:25px;
@@ -92,6 +94,9 @@ a{color:inherit;text-decoration:none}
 }
 .login-form .group .button{
     background:#1161ee;
+}
+.login-form .group .button-green{
+    background: #008000FF;
 }
 .login-form .group label .icon{
     width:15px;

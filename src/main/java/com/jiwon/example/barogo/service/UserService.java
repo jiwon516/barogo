@@ -1,25 +1,23 @@
 package com.jiwon.example.barogo.service;
 
 
-import com.jiwon.example.barogo.dto.UserDto;
-import com.jiwon.example.barogo.entity.User;
-import com.jiwon.example.barogo.repository.UserRepository;
+import com.jiwon.example.barogo.dto.UserAccountDto;
+import com.jiwon.example.barogo.entity.UserAccount;
+import com.jiwon.example.barogo.repository.UserAccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
 public class UserService {
-    private final UserRepository userRepository;
+    private final UserAccountRepository userAccountRepository;
 
-    public User createUser(UserDto userDto) {
-        User user = new User();
+    public void createUser(UserAccountDto userAccountDto) {
+        UserAccount user = new UserAccount();
 
-        user.setUserName(userDto.getUserName());
-        user.setUserId(userDto.getUserId());
-        user.setUserPassword(userDto.getUserPassword());
-        userRepository.save(user);
-
-        return user;
+        user.setUserName(userAccountDto.getUserName());
+        user.setUserId(userAccountDto.getUserId());
+        user.setUserPassword(userAccountDto.getUserPassword());
+        userAccountRepository.save(user);
     }
 }
