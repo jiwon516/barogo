@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link href="/css/login.css" rel="stylesheet" />
+    <script src="/js/login.js"></script>
+</head>
+<body>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">로그인</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">회원가입</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">아이디</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">비밀번호</label>
+                    <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="hr"></div>
+                <div class="group">
+                    <input type="submit" class="button" value="로그인">
+                </div>
+            </div>
+            <div class="sign-up-htm">
+                <div class="group">
+                    <div class="group">
+                        <label for="pass" class="label">아이디</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <label for="user" class="label">이름</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">비밀번호</label>
+                    <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="hr"></div>
+                <div class="group">
+                    <input type="submit" class="button" value="등록">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
