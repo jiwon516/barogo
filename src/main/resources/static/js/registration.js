@@ -9,7 +9,7 @@ $("#btn-sign-up").click(function () {
     }
     $.ajax({
         type: 'post',
-        url: '/user/signup',
+        url: '/user/api/signup',
         data: JSON.stringify(data),
         contentType : 'application/json; charset=utf-8',
         success: function(response) {

@@ -13,7 +13,7 @@ public class UserController {
     }
 
     //회원가입
-    @GetMapping({"registration"})
+    @GetMapping({"/registration"})
     public String registration() {
         return "user/registration";
     }
