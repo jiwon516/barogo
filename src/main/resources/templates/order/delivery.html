@@ -3,11 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>주문현황</title>
-    <link href="/css/login.css" rel="stylesheet" />
+    <link href="/css/order.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
+<div style="margin-bottom: 10px">
+    <label>∙ 조회기간</label>
+    <input type="text" id="start-date" name="start_date"> ~
+    <input type="text" id="end-date" name="end_date">
+    <select id="status" name="status">
+        <option value="0">전체</option>
+        <option value="1">배달대기</option>
+        <option value="2">배달중</option>
+        <option value="3">배달완료</option>
+    </select>
+    <button type="button" id="btn-search" class="custom-btn btn-1">조회</button>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>배달일자</th>
+        <th>배달주소</th>
+        <th>상태</th>
+        <th>Height</th>
+        <th>Weight</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div id="modalContainer" class="hidden">
+    <div id="modalContent">
+        <input type="hidden" id="target-id" name="target_id">
+        <p>주소변경</p>
+        <div>
+            <input type="text" id="address" name="address" placeholder="주소" style="width:250px;">
+        </div>
+        <div>
+            <input type="text" id="address-detail" name="address_detail" placeholder="상세주소" style="margin-top:5px; width:250px;">
+        </div>
+        <div style="margin-top: 10px;">
+            <button id="btn-save">저장</button>
+            <button id="btn-close">닫기</button>
+        </div>
+    </div>
+</div>
 </body>
 <script src="/js/delivery.js"></script>
 </html>

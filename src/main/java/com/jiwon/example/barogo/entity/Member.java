@@ -2,10 +2,13 @@ package com.jiwon.example.barogo.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -36,19 +39,12 @@ public class Member implements UserDetails {
 
     private String phone;
 
-    private String profileImg;
+    @CreationTimestamp
+    @Column(updatable = false)
+    LocalDateTime createdAt;
 
-    /*
-    @ElementCollection(fetch = FetchType.EAGER)
-    @Builder.Default
-    private List<String> roles = new ArrayList<>();
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.roles.stream()
-                .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
-    }*/
+    @UpdateTimestamp
+    LocalDateTime updatedAt;
 
 
     @Override
