@@ -19,13 +19,8 @@ $("#btn-sign-in").click(function () {
             window.location.href = '/delivery';
         },
         error: function(xhr) {
-            // 오류 시, 오류 메시지를 처리
-            let errors = xhr.responseJSON;
-            let errorMsg = '';
-            for (let error in errors) {
-                errorMsg += errors[error] + '\n';
-            }
-            alert(errorMsg);
+            console.log(xhr);
+            alert(xhr.responseText);
         }
     })
 });

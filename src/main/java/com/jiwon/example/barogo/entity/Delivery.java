@@ -1,18 +1,18 @@
 package com.jiwon.example.barogo.entity;
 
+import com.jiwon.example.barogo.dto.DeliveryDto;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@Setter
+@DynamicUpdate
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,4 +33,14 @@ public class Delivery {
     @UpdateTimestamp
     LocalDateTime updatedAt;
 
+    public void changeAddress(DeliveryDto dto){
+        this.address = dto.getAddress();
+        this.addressDetail = dto.getAddressDetail();
+    }
+
+    public void setId(long l) {
+    }
+
+    public void setStatus(int i) {
+    }
 }

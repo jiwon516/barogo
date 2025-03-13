@@ -36,12 +36,7 @@ public class UserApiController {
             return ResponseEntity.badRequest().body(errors);
         }
 
-        boolean isNew = userService.createUser(userAccountDto);
-        if(!isNew) {
-            return ResponseEntity.badRequest().body(Collections.singletonList("사용중인 아이디 입니다."));
-        }
-
-        return ResponseEntity.ok("success");
+        return userService.createUser(userAccountDto);
     }
 
     // 로그인 api

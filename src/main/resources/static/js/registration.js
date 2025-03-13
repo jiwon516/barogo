@@ -13,11 +13,10 @@ $("#btn-sign-up").click(function () {
         data: JSON.stringify(data),
         contentType : 'application/json; charset=utf-8',
         success: function(response) {
-            alert("등록되었습니다.");
+            alert(response.responseText);
             window.location.href = '/';
         },
         error: function(xhr) {
-            // 오류 시, 오류 메시지를 처리
             let errors = xhr.responseJSON;
             let errorMsg = '';
             for (let error in errors) {
