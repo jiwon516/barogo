@@ -37,10 +37,4 @@ public class Delivery {
         this.address = dto.getAddress();
         this.addressDetail = dto.getAddressDetail();
     }
-
-    public void setId(long l) {
-    }
-
-    public void setStatus(int i) {
-    }
 }

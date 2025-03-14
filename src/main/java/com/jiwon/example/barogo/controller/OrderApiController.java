@@ -62,23 +62,17 @@ public class OrderApiController {
         return ResponseEntity.ok(orderService.orderSearch(start, end, status));
     }
 
-    private void throwOrderSearchException(String message) {
-        throw new OrderServiceException(message);
-    }
-
     // 주소변경 api
     @PatchMapping("/api/delivery")
-    public ResponseEntity<?> updateDelivery(@RequestBody @Valid DeliveryDto deliveryDto, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            List<String> errors = new ArrayList<>();
-
-            bindingResult.getFieldErrors().forEach(error ->
-                    errors.add(error.getDefaultMessage())
-            );
-
-            return ResponseEntity.badRequest().body(errors);
+    public ResponseEntity<?> updateDelivery(@RequestBody @Valid DeliveryDto deliveryDto) {
+        if (deliveryDto.getAddress().isEmpty()) {
+            throwOrderSearchException("주소는 필수입력 항목 입니다.");
         }
 
         return orderService.updateAddress(deliveryDto);
+    }
+
+    private void throwOrderSearchException(String message) {
+        throw new OrderServiceException(message);
     }
 }

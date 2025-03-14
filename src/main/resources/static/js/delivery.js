@@ -78,7 +78,7 @@ $("#btn-save").click(function() {
             xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.jwt);
         },
         success: function(response) {
-            alert(response.message);
+            alert(response.responseText);
             $('#modalContainer').addClass('hidden');
             $('#btn-search').trigger('click');
         },
