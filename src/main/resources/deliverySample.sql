@@ -1,0 +1,21 @@
+/*주문조회를 위한 샘플 데이터 생성*/
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250301',2,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250301',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',3,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',2,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',2,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',2,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',2,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250302',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',3,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',3,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',3,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250303',1,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250304',2,'서울시 강서로8길 160-7','202호', now(), now());
+insert into delivery(order_date, status, address, address_detail, created_at, updated_at) values('20250305',2,'서울시 강서로8길 160-7','202호', now(), now());
