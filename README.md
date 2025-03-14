@@ -35,7 +35,7 @@
 - **ORM** : JPA
 - **Tool** : IntelliJ IDEA
 
-## API 문서
+## API 명세서
 <https://disco-knave-da7.notion.site/barogo-API-1b4af4cb523780178658df6d4685ec3c?pvs=4>
 
 ## TODO
